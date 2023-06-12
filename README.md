@@ -7,4 +7,5 @@ Architecture based on [this](https://proceedings.neurips.cc/paper_files/paper/20
 <img src="https://pytorch.org/tutorials/_images/dcgan_generator.png"  width="65%" height="65%" alt="Generator image">
 
 ## References
-[PyTorch DCGAN Tutorial](https://pytorch.org/tutorials/beginner/dcgan_faces_tutorial.html)
+[PyTorch DCGAN Tutorial](https://pytorch.org/tutorials/beginner/dcgan_faces_tutorial.html)  
+[ganhacks](https://github.com/soumith/ganhacks)
