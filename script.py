@@ -192,9 +192,9 @@ plt.ylabel("Loss")
 plt.legend()
 plt.show()
 
-####################
-## Generate Image ##
-####################
+#################################
+## Generate Image / Save Model ##
+#################################
 
 # call to create a Monet-style image
 def generate_img(save=True):
@@ -215,3 +215,27 @@ def generate_img(save=True):
     plt.show()
 
 generate_img()
+
+# call to save final model
+def save_model():
+    params = {
+        "nc" : nc,
+        "nz" : nz,
+        "ngf" : ngf,
+        "ndf" : ndf,
+        "lr" : lr,
+        "beta1" : beta1,
+        "real_label" : real_label,
+        "fake_label" : fake_label,
+        "num_epochs" : num_epochs,
+        "batch_size" : batch_size,
+        "lambda_reg" : lambda_reg
+    }
+
+    torch.save({
+                'generator' : netG.state_dict(),
+                'discriminator' : netD.state_dict(),
+                'optimizerG' : optimizerG.state_dict(),
+                'optimizerD' : optimizerD.state_dict(),
+                'params' : params
+                }, 'model_final.pth')
